@@ -1,0 +1,19 @@
+﻿CapChem_Vendor_ID,CapChem_Vendor_Name,On_Time_Performance_Last_5_years,In_Full_Perfomance_Last_5_years,Quality_Score_Last_5_Years,Pricing_Performance_(%_times_lowest_cost_among_vendors_in_last_5_years),Payment_Terms_in_days_from_invocie,Contingency_Support,Composite_Supplier_Performance_Score
+V001,Jubair Corp,80,90,100,10,15,Yes,67
+V002,Mecca Enterprises,90,100,90,30,30,Yes,79
+V003,Prakash Chemicals,70,80,65,30,90,Yes,75
+V004,Ural Enterprises,30,80,80,10,60,No,50
+V005,Volga Chemicals,30,80,80,10,60,No,50
+V006,Navin Corp,70,80,70,60,60,No,64
+V007,Nova Industries,70,80,90,10,15,No,45
+V008,Deepak Enterprises,70,80,50,70,60,No,62
+V009,Hyderabad Chemicals,80,90,70,70,60,No,69
+V010,ChemTech Corp,90,100,90,30,30,Yes,79
+V011,Berlin Enterprises,70,80,100,30,30,No,57
+V012,Bayer Corp,90,100,100,20,30,No,62
+V013,Beijing Corp,90,100,95,90,60,No,80
+V014,Greenfield Chemicals Ltd.,70,80,100,10,10,Yes,64
+V015,Wuhan Enterprises,70,80,90,90,60,No,72
+V016,Summit Enterprises,50,60,100,10,10,Yes,57
+V017,Casablanca Industries,30,80,70,70,30,No,52
+V018,Zarqa Specialty Chemicals,60,70,80,30,30,No,50

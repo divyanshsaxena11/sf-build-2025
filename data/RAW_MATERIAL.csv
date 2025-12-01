@@ -1,0 +1,17 @@
+﻿CapChem_Raw_Material_ID,Global_Material_ID,CapChem_Raw_Material_Name,CapChem_Raw_Material_Category
+RM0001,M001,Ammonia,Nitrogen
+RM0002,M002,Urea,Nitrogen
+RM0003,M003,Potassium Chloride,Potassium
+RM0004,M004,Ammonium Nitrate,Nitrogen
+RM0005,M005,Potassium Sulphate,Potassium
+RM0006,M006,Potassium Nitrate,Potassium
+RM0007,M007,Chlorine,Micronutrient
+RM0008,M008,Iron,Micronutrient
+RM0009,M009,Zinc,Micronutrient
+RM0010,M010,Manganese,Micronutrient
+RM0011,M011,Boron,Micronutrient
+RM0012,M012,Molybdenum,Micronutrient
+RM0013,M013,Copper,Micronutrient
+RM0014,M014,Phosphoric Acid,Phosphurus
+RM0015,M015,Phosphate Rock,Phosphurus
+RM0016,M016,Potash,Potassium

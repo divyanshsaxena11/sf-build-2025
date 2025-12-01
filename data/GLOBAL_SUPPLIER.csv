@@ -1,0 +1,81 @@
+﻿Global_Supplier_ID,Global_Supplier_Name,Global_Supplier_Country,Global_Supplier_Address,Global_Supplier_PhoneNumber,Global_Supplier_Website,Global_Supplier_Email,Lead_Time,Whether_Exisiting_Vendor_For_CapChem,Global_Reliability_Score,Global_Trade_Restrictions,Global_Supplier_Capacity
+S001,Medan Chemicals,Indonesia,"400 Industrial Area, Indonesia, 177474",+62-9489537132,http://www.medan.com,contact@medan.com,18,No,7,No,341290
+S002,Jubair Corp,UAE,"500 Chemical Zone, UAE, 475260",+971-5107980137,http://www.jubair.com,contact@jubair.com,17,Yes,8,No,408594
+S003,Mecca Enterprises,Saudi Arabia,"568 Industrial Area, Saudi Arabia, 949897",+966-5784963273,http://www.mecca.com,contact@mecca.com,19,Yes,9,No,179784
+S004,BelChem Chemicals,Belarus,"695 Chemical Zone, Belarus, 706828",+375-8800381057,http://www.belchem.com,contact@belchem.com,47,No,6,No,236830
+S005,Jeddah Corp,Saudi Arabia,"452 Tech Park, Saudi Arabia, 745359",+966-1290215138,http://www.jeddah.com,contact@jeddah.com,15,No,5,No,378446
+S006,Emirates Specialty Chemicals,UAE,"416 Chemical Zone, UAE, 870927",+971-9500653892,http://www.emirates.com,contact@emirates.com,16,No,8,No,478858
+S007,Prakash Chemicals,India,"983 Chemical Zone, India, 487019",+91-2042815314,http://www.prakash.com,contact@prakash.com,7,Yes,7,No,457229
+S008,Jakarta Specialty Chemicals,Indonesia,"822 Chemical Zone, Indonesia, 650579",+62-3208841628,http://www.jakarta.com,contact@jakarta.com,18,No,5,No,401208
+S009,Bandung Specialty Chemicals,Indonesia,"335 Chemical Zone, Indonesia, 307393",+62-5194631588,http://www.bandung.com,contact@bandung.com,20,No,6,No,51292
+S010,Desert Corp,Saudi Arabia,"286 Chemical Zone, Saudi Arabia, 710498",+966-8020092582,http://www.desert.com,contact@desert.com,16,No,7,No,402889
+S011,Minsk Specialty Chemicals,Belarus,"294 Industrial Area, Belarus, 607715",+375-2244886236,http://www.minsk.com,contact@minsk.com,42,No,8,No,43263
+S012,Al-Saud Corp,Saudi Arabia,"843 Chemical Zone, Saudi Arabia, 193925",+966-4402856020,http://www.al-saud.com,contact@al-saud.com,16,No,5,No,11897
+S013,Mumbai Chemicals,India,"393 Chemical Zone, India, 244625",+91-7398443490,http://www.mumbai.com,contact@mumbai.com,5,No,6,No,244706
+S014,Kazan Corp,Russia,"592 Chemical Zone, Russia, 620008",+7-2771340332,http://www.kazan.com,contact@kazan.com,37,No,7,Yes,129654
+S015,Ural Enterprises,Russia,"448 Chemical Zone, Russia, 952531",+7-3497207104,http://www.ural.com,contact@ural.com,41,Yes,3,Yes,209609
+S016,Sharjah Corp,UAE,"589 Industrial Area, UAE, 157660",+971-3650034374,http://www.sharjah.com,contact@sharjah.com,13,No,7,No,187702
+S017,Volga Chemicals,Russia,"447 Industrial Area, Russia, 757276",+7-5813239231,http://www.volga.com,contact@volga.com,35,Yes,3,Yes,206073
+S018,Navin Corp,India,"329 Tech Park, India, 174470",+91-8313254726,http://www.navin.com,contact@navin.com,5,Yes,7,No,338519
+S019,Riyadh Enterprises,Saudi Arabia,"561 Tech Park, Saudi Arabia, 462608",+966-6439428805,http://www.riyadh.com,contact@riyadh.com,16,No,5,No,173225
+S020,Nova Industries,Canada,"980 Tech Park, Canada, 713998",+1-2793581356,http://www.nova.com,contact@nova.com,82,Yes,7,No,424415
+S021,Ontario Enterprises,Canada,"172 Chemical Zone, Canada, 585905",+1-2457643846,http://www.ontario.com,contact@ontario.com,76,No,6,No,471702
+S022,Moscow Industries,Russia,"845 Chemical Zone, Russia, 218240",+7-6660799587,http://www.moscow.com,contact@moscow.com,46,No,5,Yes,450157
+S023,Quebec Chemicals,Canada,"364 Industrial Area, Canada, 181288",+1-1764570399,http://www.quebec.com,contact@quebec.com,87,No,7,No,203408
+S024,Deepak Enterprises,India,"239 Tech Park, India, 444366",+91-3900368957,http://www.deepak.com,contact@deepak.com,6,Yes,7,No,64293
+S025,Vitebsk Specialty Chemicals,Belarus,"505 Chemical Zone, Belarus, 197053",+375-3498364408,http://www.vitebsk.com,contact@vitebsk.com,49,No,6,No,33242
+S026,Bharat Enterprises,India,"457 Chemical Zone, India, 313202",+91-3447443553,http://www.bharat.com,contact@bharat.com,5,No,5,No,342245
+S027,Al-Arab Industries,UAE,"211 Industrial Area, UAE, 658588",+971-7744706913,http://www.al-arab.com,contact@al-arab.com,16,No,8,No,284557
+S028,Dubai Enterprises,UAE,"808 Tech Park, UAE, 119823",+971-9868723442,http://www.dubai.com,contact@dubai.com,15,No,10,No,399513
+S029,Grodno Industries,Belarus,"775 Industrial Area, Belarus, 251936",+375-8226594193,http://www.grodno.com,contact@grodno.com,48,No,5,No,31168
+S030,Alberta Industries,Canada,"843 Industrial Area, Canada, 801452",+1-1202152846,http://www.alberta.com,contact@alberta.com,76,No,6,No,365721
+S031,SiberChem Specialty Chemicals,Russia,"131 Industrial Area, Russia, 988007",+7-6028481667,http://www.siberchem.com,contact@siberchem.com,45,No,6,Yes,249320
+S032,Maple Chemicals,Canada,"134 Tech Park, Canada, 805955",+1-7495978692,http://www.maple.com,contact@maple.com,90,No,8,No,26427
+S033,Brest Industries,Belarus,"817 Industrial Area, Belarus, 379566",+375-4725597030,http://www.brest.com,contact@brest.com,41,No,5,No,466246
+S034,Hyderabad Chemicals,India,"846 Main St, Hyderabad, India - 607708",+91-8145306893,http://www.hyderabadchemicals.com,info@hyderabadchemicals.com,5,Yes,8,No,19632
+S035,Surya Chemicals,Indonesia,"965 Market Rd, Bandung, Indonesia - 180907",+62-9889148340,http://www.suryachemicals.com,info@suryachemicals.com,18,No,7,No,25952
+S036,Garuda Chemicals,Indonesia,"353 Main St, Surabaya, Indonesia - 411814",+62-1406555895,http://www.garudachemicals.com,info@garudachemicals.com,16,No,6,No,59693
+S037,St. Petersburg Chemicals,Russia,"904 Market Rd, Moscow, Russia - 280378",+7-1033965703,http://www.stpetersburgchemicals.com,info@stpetersburgchemicals.com,42,No,5,Yes,18910
+S038,Chennai Chemicals,India,"477 Chemical Lane, Chennai, India - 135866",+91-4342541194,http://www.chennaichemicals.com,info@chennaichemicals.com,6,No,5,No,81006
+S039,Maghreb Chemicals,UAE,"803 Chemical Lane, Dubai, UAE - 430939",+971-9735551359,http://www.maghrebchemicals.com,info@maghrebchemicals.com,13,No,8,No,58087
+S040,Al-Nasr Chemicals,UAE,"650 Main St, Sharjah, UAE - 873088",+971-5446842128,http://www.al-nasrchemicals.com,info@al-nasrchemicals.com,13,No,5,No,53214
+S041,Sahara Chemicals,UAE,"267 Main St, Sharjah, UAE - 498617",+971-8109596644,http://www.saharachemicals.com,info@saharachemicals.com,17,No,5,No,26416
+S042,Nusantara Chemicals,Indonesia,"929 Market Rd, Jakarta, Indonesia - 127842",+62-3288458181,http://www.nusantarachemicals.com,info@nusantarachemicals.com,18,No,8,No,82035
+S043,Indo Chemicals,Indonesia,"544 Market Rd, Bandung, Indonesia - 689583",+62-7817799106,http://www.indochemicals.com,info@indochemicals.com,18,No,8,No,14332
+S044,ChemTech Corp,Germany,"945 Chemical Zone, Germany, 465985",+49-5309271621,http://www.chemtech.com,contact@chemtech.com,38,Yes,9,No,148090
+S045,Berlin Enterprises,Germany,"244 Chemical Zone, Germany, 511740",+49-6486581106,http://www.berlin.com,contact@berlin.com,41,Yes,7,No,483413
+S046,Pioneer Chemicals,USA,"275 Industrial Area, USA, 730239",+1-9095147343,http://www.pioneer.com,contact@pioneer.com,89,No,7,No,22974
+S047,Shenzhen Specialty Chemicals,China,"493 Chemical Zone, China, 437845",+86-2502561912,http://www.shenzhen.com,contact@shenzhen.com,27,No,5,No,34606
+S048,SinoChem Specialty Chemicals,China,"905 Tech Park, China, 345370",+86-8885441798,http://www.sinochem.com,contact@sinochem.com,26,No,5,No,186249
+S049,Wuhan Corp,China,"455 Chemical Zone, China, 801911",+86-6875363302,http://www.wuhan.com,contact@wuhan.com,33,No,6,No,208455
+S050,Frankfurt Corp,Germany,"843 Industrial Area, Germany, 902337",+49-7400127660,http://www.frankfurt.com,contact@frankfurt.com,38,No,8,No,26333
+S051,Summit Industries,USA,"844 Chemical Zone, USA, 541340",+1-3640268216,http://www.summit.com,contact@summit.com,94,No,6,No,103446
+S052,Rhein Chemicals,Germany,"145 Industrial Area, Germany, 278937",+49-4909002431,http://www.rhein.com,contact@rhein.com,46,No,9,No,340603
+S053,Elliot & Sons Enterprises,USA,"892 Tech Park, USA, 631710",+1-6208447604,http://www.elliot&sons.com,contact@elliot&sons.com,73,No,6,No,228559
+S054,Bayer Corp,Germany,"920 Industrial Area, Germany, 277917",+49-3503439207,http://www.bayer.com,contact@bayer.com,42,Yes,9,No,152578
+S055,Liberty Specialty Chemicals,USA,"287 Tech Park, USA, 761474",+1-9369642321,http://www.liberty.com,contact@liberty.com,64,No,5,No,34009
+S056,Guangzhou Chemicals,China,"586 Chemical Zone, China, 409236",+86-3515857757,http://www.guangzhou.com,contact@guangzhou.com,30,No,9,No,475287
+S057,Beijing Corp,China,"626 Industrial Area, China, 550948",+86-6494948127,http://www.beijing.com,contact@beijing.com,36,Yes,9,No,305740
+S058,Frontier Specialty Chemicals,USA,"878 Industrial Area, USA, 455983",+1-3754285710,http://www.frontier.com,contact@frontier.com,80,No,7,No,68930
+S059,Nordic GmbH,Germany,"447 Main St, Munich, Germany - 304949",+49-1171820375,http://www.nordicgmbh.com,info@nordicgmbh.com,45,No,8,No,92175
+S060,Orient Chemicals Co.,China,"103 Market Rd, Shenzhen, China - 941395",+86-8736795946,http://www.orientchemicalsco.com,info@orientchemicalsco.com,37,No,8,No,62295
+S061,ChemTech GmbH,Germany,"587 Main St, Munich, Germany - 700232",+49-4481939914,http://www.chemtechgmbh.com,info@chemtechgmbh.com,35,No,7,No,84013
+S062,Red Dragon Chemicals Co.,China,"247 Market Rd, Shenzhen, China - 822969",+86-5870613365,http://www.reddragonchemicalsco.com,info@reddragonchemicalsco.com,37,No,6,No,73671
+S063,Bremen GmbH,Germany,"986 Market Rd, Munich, Germany - 160688",+49-5333416098,http://www.bremengmbh.com,info@bremengmbh.com,44,No,9,No,70043
+S064,Greenfield Chemicals Ltd.,USA,"685 Main St, Houston, USA - 946074",+1-1884449436,http://www.greenfieldchemicalsltd.com,info@greenfieldchemicalsltd.com,78,Yes,7,No,82843
+S065,Wuhan Enterprises,China,"383 Tech Park, China, 967073",+86-1141623811,http://www.wuhan.com,contact@wuhan.com,32,Yes,7,No,103235
+S066,Aqaba Corp,Jordan,"991 Industrial Area, Jordan, 160823",+962-2784297381,http://www.aqaba.com,contact@aqaba.com,25,No,3,No,349703
+S067,Fez Corp,Morocco,"145 Industrial Area, Morocco, 662290",+212-7402253934,http://www.fez.com,contact@fez.com,27,No,5,No,299613
+S068,Summit Enterprises,USA,"672 Industrial Area, USA, 145180",+1-9421462302,http://www.summit.com,contact@summit.com,87,Yes,5,No,305495
+S069,Bizerte Industries,Tunisia,"216 Chemical Zone, Tunisia, 400947",+216-8603063029,http://www.bizerte.com,contact@bizerte.com,91,No,5,No,73967
+S070,Irbid Specialty Chemicals,Jordan,"172 Industrial Area, Jordan, 678765",+962-6033720713,http://www.irbid.com,contact@irbid.com,36,No,5,No,477631
+S071,Shenzhen Industries,China,"605 Chemical Zone, China, 701726",+86-8974616163,http://www.shenzhen.com,contact@shenzhen.com,30,No,6,No,492358
+S072,Frontier Chemicals,USA,"203 Chemical Zone, USA, 914097",+1-5548097069,http://www.frontier.com,contact@frontier.com,97,No,9,No,319306
+S073,Casablanca Industries,Morocco,"356 Industrial Area, Morocco, 247559",+212-7682034535,http://www.casablanca.com,contact@casablanca.com,22,Yes,3,No,414770
+S074,Zarqa Specialty Chemicals,Jordan,"120 Tech Park, Jordan, 960428",+962-8644321431,http://www.zarqa.com,contact@zarqa.com,43,Yes,6,No,349290
+S075,Rabat Enterprises,Morocco,"243 Tech Park, Morocco, 747901",+212-3499504989,http://www.rabat.com,contact@rabat.com,33,No,5,No,359597
+S076,Pioneer Industries,USA,"141 Industrial Area, USA, 606907",+1-2459365586,http://www.pioneer.com,contact@pioneer.com,82,No,5,No,187611
+S077,Guangzhou Industries,China,"872 Tech Park, China, 938414",+86-9389982265,http://www.guangzhou.com,contact@guangzhou.com,31,No,9,No,261658
+S078,Sfax Industries,Tunisia,"425 Tech Park, Tunisia, 663997",+216-1236614199,http://www.sfax.com,contact@sfax.com,68,No,7,No,30704
+S079,SinoChem Industries,China,"720 Chemical Zone, China, 944495",+86-5683739436,http://www.sinochem.com,contact@sinochem.com,33,No,7,No,416001
+S080,Atlas Chemicals,Morocco,"343 Tech Park, Morocco, 790645",+212-5165943248,http://www.atlas.com,contact@atlas.com,31,No,4,No,53132

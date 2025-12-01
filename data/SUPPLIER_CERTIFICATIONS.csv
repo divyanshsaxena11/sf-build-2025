@@ -1,0 +1,257 @@
+﻿Global_Supplier_ID,Global_Certification_ID,Global_Supplier_Name,Global_Certification_Name
+S001,C001,Medan Chemicals,ISO 9001
+S001,C002,Medan Chemicals,ISO 14001
+S001,C003,Medan Chemicals,ISO 45001
+S002,C001,Jubair Corp,ISO 9001
+S002,C002,Jubair Corp,ISO 14001
+S002,C003,Jubair Corp,ISO 45001
+S002,C006,Jubair Corp,PAS 2060
+S003,C001,Mecca Enterprises,ISO 9001
+S003,C002,Mecca Enterprises,ISO 14001
+S003,C004,Mecca Enterprises,ISO 22301
+S004,C001,BelChem Chemicals,ISO 9001
+S004,C002,BelChem Chemicals,ISO 14001
+S004,C004,BelChem Chemicals,ISO 22301
+S005,C001,Jeddah Corp,ISO 9001
+S005,C002,Jeddah Corp,ISO 14001
+S005,C003,Jeddah Corp,ISO 45001
+S005,C004,Jeddah Corp,ISO 22301
+S006,C001,Emirates Specialty Chemicals,ISO 9001
+S006,C003,Emirates Specialty Chemicals,ISO 45001
+S006,C002,Emirates Specialty Chemicals,ISO 14001
+S006,C004,Emirates Specialty Chemicals,ISO 22301
+S007,C001,Prakash Chemicals,ISO 9001
+S007,C003,Prakash Chemicals,ISO 45001
+S007,C004,Prakash Chemicals,ISO 22301
+S008,C001,Jakarta Specialty Chemicals,ISO 9001
+S008,C003,Jakarta Specialty Chemicals,ISO 45001
+S008,C004,Jakarta Specialty Chemicals,ISO 22301
+S009,C001,Bandung Specialty Chemicals,ISO 9001
+S009,C004,Bandung Specialty Chemicals,ISO 22301
+S010,C001,Desert Corp,ISO 9001
+S010,C003,Desert Corp,ISO 45001
+S010,C004,Desert Corp,ISO 22301
+S011,C001,Minsk Specialty Chemicals,ISO 9001
+S011,C002,Minsk Specialty Chemicals,ISO 14001
+S011,C003,Minsk Specialty Chemicals,ISO 45001
+S011,C004,Minsk Specialty Chemicals,ISO 22301
+S012,C001,Al-Saud Corp,ISO 9001
+S012,C002,Al-Saud Corp,ISO 14001
+S012,C003,Al-Saud Corp,ISO 45001
+S013,C001,Mumbai Chemicals,ISO 9001
+S013,C002,Mumbai Chemicals,ISO 14001
+S013,C003,Mumbai Chemicals,ISO 45001
+S014,#N/A,Kazan Corp,
+S015,#N/A,Ural Enterprises,
+S016,C001,Sharjah Corp,ISO 9001
+S016,C002,Sharjah Corp,ISO 14001
+S016,C004,Sharjah Corp,ISO 22301
+S017,#N/A,Volga Chemicals,
+S018,C001,Navin Corp,ISO 9001
+S018,C002,Navin Corp,ISO 14001
+S018,C003,Navin Corp,ISO 45001
+S019,C001,Riyadh Enterprises,ISO 9001
+S020,C002,Nova Industries,ISO 14001
+S020,C003,Nova Industries,ISO 45001
+S020,C004,Nova Industries,ISO 22301
+S021,C001,Ontario Enterprises,ISO 9001
+S021,C002,Ontario Enterprises,ISO 14001
+S021,C003,Ontario Enterprises,ISO 45001
+S021,C006,Ontario Enterprises,PAS 2060
+S021,C004,Ontario Enterprises,ISO 22301
+S022,#N/A,Moscow Industries,
+S023,C001,Quebec Chemicals,ISO 9001
+S023,C002,Quebec Chemicals,ISO 14001
+S023,C003,Quebec Chemicals,ISO 45001
+S023,C006,Quebec Chemicals,PAS 2060
+S023,C004,Quebec Chemicals,ISO 22301
+S023,C005,Quebec Chemicals,ISO 37001
+S024,C001,Deepak Enterprises,ISO 9001
+S024,C003,Deepak Enterprises,ISO 45001
+S024,C002,Deepak Enterprises,ISO 14001
+S024,C004,Deepak Enterprises,ISO 22301
+S025,C001,Vitebsk Specialty Chemicals,ISO 9001
+S025,C002,Vitebsk Specialty Chemicals,ISO 14001
+S025,C004,Vitebsk Specialty Chemicals,ISO 22301
+S026,C002,Bharat Enterprises,ISO 14001
+S026,C003,Bharat Enterprises,ISO 45001
+S026,C004,Bharat Enterprises,ISO 22301
+S027,C001,Al-Arab Industries,ISO 9001
+S027,C002,Al-Arab Industries,ISO 14001
+S027,C003,Al-Arab Industries,ISO 45001
+S027,C006,Al-Arab Industries,PAS 2060
+S027,C004,Al-Arab Industries,ISO 22301
+S028,C001,Dubai Enterprises,ISO 9001
+S028,C002,Dubai Enterprises,ISO 14001
+S028,C003,Dubai Enterprises,ISO 45001
+S028,C006,Dubai Enterprises,PAS 2060
+S028,C004,Dubai Enterprises,ISO 22301
+S028,C005,Dubai Enterprises,ISO 37001
+S029,C001,Grodno Industries,ISO 9001
+S029,C003,Grodno Industries,ISO 45001
+S029,C002,Grodno Industries,ISO 14001
+S029,C004,Grodno Industries,ISO 22301
+S030,C001,Alberta Industries,ISO 9001
+S030,C002,Alberta Industries,ISO 14001
+S030,C004,Alberta Industries,ISO 22301
+S031,C002,SiberChem Specialty Chemicals,ISO 14001
+S031,C003,SiberChem Specialty Chemicals,ISO 45001
+S031,C004,SiberChem Specialty Chemicals,ISO 22301
+S032,C001,Maple Chemicals,ISO 9001
+S032,C002,Maple Chemicals,ISO 14001
+S032,C003,Maple Chemicals,ISO 45001
+S032,C006,Maple Chemicals,PAS 2060
+S032,C004,Maple Chemicals,ISO 22301
+S033,#N/A,Brest Industries,
+S034,C001,Hyderabad Chemicals,ISO 9001
+S034,C003,Hyderabad Chemicals,ISO 45001
+S034,C002,Hyderabad Chemicals,ISO 14001
+S035,C001,Surya Chemicals,ISO 9001
+S035,C003,Surya Chemicals,ISO 45001
+S035,C002,Surya Chemicals,ISO 14001
+S036,C001,Garuda Chemicals,ISO 9001
+S036,C003,Garuda Chemicals,ISO 45001
+S037,#N/A,St. Petersburg Chemicals,
+S038,C001,Chennai Chemicals,ISO 9001
+S039,C001,Maghreb Chemicals,ISO 9001
+S039,C002,Maghreb Chemicals,ISO 14001
+S039,C003,Maghreb Chemicals,ISO 45001
+S039,C006,Maghreb Chemicals,PAS 2060
+S039,C004,Maghreb Chemicals,ISO 22301
+S039,C005,Maghreb Chemicals,ISO 37001
+S040,C001,Al-Nasr Chemicals,ISO 9001
+S040,C003,Al-Nasr Chemicals,ISO 45001
+S040,C002,Al-Nasr Chemicals,ISO 14001
+S040,C004,Al-Nasr Chemicals,ISO 22301
+S041,C001,Sahara Chemicals,ISO 9001
+S041,C002,Sahara Chemicals,ISO 14001
+S041,C004,Sahara Chemicals,ISO 22301
+S042,C002,Nusantara Chemicals,ISO 14001
+S042,C003,Nusantara Chemicals,ISO 45001
+S042,C004,Nusantara Chemicals,ISO 22301
+S043,C001,Indo Chemicals,ISO 9001
+S043,C002,Indo Chemicals,ISO 14001
+S043,C003,Indo Chemicals,ISO 45001
+S043,C006,Indo Chemicals,PAS 2060
+S043,C004,Indo Chemicals,ISO 22301
+S044,C001,ChemTech Corp,ISO 9001
+S044,C003,ChemTech Corp,ISO 45001
+S044,C002,ChemTech Corp,ISO 14001
+S044,C006,ChemTech Corp,PAS 2060
+S044,C004,ChemTech Corp,ISO 22301
+S044,C005,ChemTech Corp,ISO 37001
+S045,C003,Berlin Enterprises,ISO 45001
+S045,C002,Berlin Enterprises,ISO 14001
+S045,C006,Berlin Enterprises,PAS 2060
+S046,C001,Pioneer Chemicals,ISO 9001
+S046,C002,Pioneer Chemicals,ISO 14001
+S046,C003,Pioneer Chemicals,ISO 45001
+S046,C006,Pioneer Chemicals,PAS 2060
+S046,C004,Pioneer Chemicals,ISO 22301
+S046,C005,Pioneer Chemicals,ISO 37001
+S047,C001,Shenzhen Specialty Chemicals,ISO 9001
+S047,C003,Shenzhen Specialty Chemicals,ISO 45001
+S047,C002,Shenzhen Specialty Chemicals,ISO 14001
+S047,C004,Shenzhen Specialty Chemicals,ISO 22301
+S048,C001,SinoChem Specialty Chemicals,ISO 9001
+S048,C002,SinoChem Specialty Chemicals,ISO 14001
+S048,C004,SinoChem Specialty Chemicals,ISO 22301
+S049,C002,Wuhan Corp,ISO 14001
+S049,C003,Wuhan Corp,ISO 45001
+S049,C004,Wuhan Corp,ISO 22301
+S050,C001,Frankfurt Corp,ISO 9001
+S050,C002,Frankfurt Corp,ISO 14001
+S050,C003,Frankfurt Corp,ISO 45001
+S050,C006,Frankfurt Corp,PAS 2060
+S050,C004,Frankfurt Corp,ISO 22301
+S051,C002,Summit Industries,ISO 14001
+S051,C003,Summit Industries,ISO 45001
+S051,C005,Summit Industries,ISO 37001
+S052,C002,Rhein Chemicals,ISO 14001
+S052,C006,Rhein Chemicals,PAS 2060
+S052,C004,Rhein Chemicals,ISO 22301
+S052,C005,Rhein Chemicals,ISO 37001
+S053,C002,Elliot & Sons Enterprises,ISO 14001
+S053,C006,Elliot & Sons Enterprises,PAS 2060
+S053,C004,Elliot & Sons Enterprises,ISO 22301
+S053,C005,Elliot & Sons Enterprises,ISO 37001
+S054,C001,Bayer Corp,ISO 9001
+S054,C002,Bayer Corp,ISO 14001
+S054,C003,Bayer Corp,ISO 45001
+S054,C006,Bayer Corp,PAS 2060
+S054,C004,Bayer Corp,ISO 22301
+S055,C001,Liberty Specialty Chemicals,ISO 9001
+S055,C005,Liberty Specialty Chemicals,ISO 37001
+S056,C001,Guangzhou Chemicals,ISO 9001
+S056,C003,Guangzhou Chemicals,ISO 45001
+S056,C002,Guangzhou Chemicals,ISO 14001
+S056,C004,Guangzhou Chemicals,ISO 22301
+S056,C005,Guangzhou Chemicals,ISO 37001
+S057,C001,Beijing Corp,ISO 9001
+S057,C002,Beijing Corp,ISO 14001
+S057,C003,Beijing Corp,ISO 45001
+S057,C004,Beijing Corp,ISO 22301
+S057,C005,Beijing Corp,ISO 37001
+S058,C001,Frontier Specialty Chemicals,ISO 9001
+S058,C002,Frontier Specialty Chemicals,ISO 14001
+S058,C003,Frontier Specialty Chemicals,ISO 45001
+S058,C004,Frontier Specialty Chemicals,ISO 22301
+S058,C005,Frontier Specialty Chemicals,ISO 37001
+S059,C001,Nordic GmbH,ISO 9001
+S059,C002,Nordic GmbH,ISO 14001
+S059,C006,Nordic GmbH,PAS 2060
+S059,C005,Nordic GmbH,ISO 37001
+S060,C001,Orient Chemicals Co.,ISO 9001
+S060,C002,Orient Chemicals Co.,ISO 14001
+S060,C003,Orient Chemicals Co.,ISO 45001
+S060,C004,Orient Chemicals Co.,ISO 22301
+S061,C001,ChemTech GmbH,ISO 9001
+S061,C002,ChemTech GmbH,ISO 14001
+S061,C006,ChemTech GmbH,PAS 2060
+S062,C001,Red Dragon Chemicals Co.,ISO 9001
+S062,C002,Red Dragon Chemicals Co.,ISO 14001
+S062,C003,Red Dragon Chemicals Co.,ISO 45001
+S062,C004,Red Dragon Chemicals Co.,ISO 22301
+S063,C002,Bremen GmbH,ISO 14001
+S063,C006,Bremen GmbH,PAS 2060
+S063,C005,Bremen GmbH,ISO 37001
+S064,C001,Greenfield Chemicals Ltd.,ISO 9001
+S064,C002,Greenfield Chemicals Ltd.,ISO 14001
+S064,C003,Greenfield Chemicals Ltd.,ISO 45001
+S064,C004,Greenfield Chemicals Ltd.,ISO 22301
+S065,C001,Wuhan Enterprises,ISO 9001
+S065,C003,Wuhan Enterprises,ISO 45001
+S065,C002,Wuhan Enterprises,ISO 14001
+S065,C004,Wuhan Enterprises,ISO 22301
+S066,#N/A,Aqaba Corp,
+S067,C001,Fez Corp,ISO 9001
+S067,C002,Fez Corp,ISO 14001
+S067,C004,Fez Corp,ISO 22301
+S068,C001,Summit Enterprises,ISO 9001
+S068,C003,Summit Enterprises,ISO 45001
+S068,C006,Summit Enterprises,PAS 2060
+S068,C004,Summit Enterprises,ISO 22301
+S069,#N/A,Bizerte Industries,
+S070,#N/A,Irbid Specialty Chemicals,
+S071,C001,Shenzhen Industries,ISO 9001
+S071,C004,Shenzhen Industries,ISO 22301
+S072,C001,Frontier Chemicals,ISO 9001
+S072,C003,Frontier Chemicals,ISO 45001
+S072,C002,Frontier Chemicals,ISO 14001
+S072,C006,Frontier Chemicals,PAS 2060
+S072,C004,Frontier Chemicals,ISO 22301
+S073,#N/A,Casablanca Industries,
+S074,C001,Zarqa Specialty Chemicals,ISO 9001
+S075,#N/A,Rabat Enterprises,
+S076,C001,Pioneer Industries,ISO 9001
+S076,C004,Pioneer Industries,ISO 22301
+S077,C001,Guangzhou Industries,ISO 9001
+S077,C002,Guangzhou Industries,ISO 14001
+S077,C003,Guangzhou Industries,ISO 45001
+S077,C004,Guangzhou Industries,ISO 22301
+S078,C001,Sfax Industries,ISO 9001
+S078,C003,Sfax Industries,ISO 45001
+S078,C005,Sfax Industries,ISO 37001
+S079,C001,SinoChem Industries,ISO 9001
+S079,C004,SinoChem Industries,ISO 22301
+S080,#N/A,Atlas Chemicals,

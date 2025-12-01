@@ -1,0 +1,150 @@
+﻿Global_Material_ID,Global_Material_Name,Global_Material_Type,Global_Supplier_ID,Global_Supplier_Name
+M001,Ammonia,Commodity,S001,Medan Chemicals
+M001,Ammonia,Commodity,S002,Jubair Corp
+M001,Ammonia,Commodity,S003,Mecca Enterprises
+M001,Ammonia,Commodity,S005,Jeddah Corp
+M001,Ammonia,Commodity,S007,Prakash Chemicals
+M001,Ammonia,Commodity,S008,Jakarta Specialty Chemicals
+M001,Ammonia,Commodity,S010,Desert Corp
+M001,Ammonia,Commodity,S012,Al-Saud Corp
+M001,Ammonia,Commodity,S018,Navin Corp
+M001,Ammonia,Commodity,S019,Riyadh Enterprises
+M001,Ammonia,Commodity,S022,Moscow Industries
+M001,Ammonia,Commodity,S024,Deepak Enterprises
+M001,Ammonia,Commodity,S026,Bharat Enterprises
+M001,Ammonia,Commodity,S028,Dubai Enterprises
+M001,Ammonia,Commodity,S034,Hyderabad Chemicals
+M001,Ammonia,Commodity,S040,Al-Nasr Chemicals
+M002,Urea,Commodity,S001,Medan Chemicals
+M002,Urea,Commodity,S002,Jubair Corp
+M002,Urea,Commodity,S005,Jeddah Corp
+M002,Urea,Commodity,S006,Emirates Specialty Chemicals
+M002,Urea,Commodity,S008,Jakarta Specialty Chemicals
+M002,Urea,Commodity,S009,Bandung Specialty Chemicals
+M002,Urea,Commodity,S010,Desert Corp
+M002,Urea,Commodity,S012,Al-Saud Corp
+M002,Urea,Commodity,S013,Mumbai Chemicals
+M002,Urea,Commodity,S014,Kazan Corp
+M002,Urea,Commodity,S016,Sharjah Corp
+M002,Urea,Commodity,S017,Volga Chemicals
+M002,Urea,Commodity,S018,Navin Corp
+M002,Urea,Commodity,S024,Deepak Enterprises
+M002,Urea,Commodity,S027,Al-Arab Industries
+M002,Urea,Commodity,S028,Dubai Enterprises
+M002,Urea,Commodity,S035,Surya Chemicals
+M002,Urea,Commodity,S036,Garuda Chemicals
+M002,Urea,Commodity,S039,Maghreb Chemicals
+M002,Urea,Commodity,S041,Sahara Chemicals
+M002,Urea,Commodity,S043,Indo Chemicals
+M004,Ammonium Nitrate,Commodity,S001,Medan Chemicals
+M004,Ammonium Nitrate,Commodity,S002,Jubair Corp
+M004,Ammonium Nitrate,Commodity,S003,Mecca Enterprises
+M004,Ammonium Nitrate,Commodity,S005,Jeddah Corp
+M004,Ammonium Nitrate,Commodity,S006,Emirates Specialty Chemicals
+M004,Ammonium Nitrate,Commodity,S008,Jakarta Specialty Chemicals
+M004,Ammonium Nitrate,Commodity,S010,Desert Corp
+M004,Ammonium Nitrate,Commodity,S012,Al-Saud Corp
+M004,Ammonium Nitrate,Commodity,S013,Mumbai Chemicals
+M004,Ammonium Nitrate,Commodity,S015,Ural Enterprises
+M004,Ammonium Nitrate,Commodity,S019,Riyadh Enterprises
+M004,Ammonium Nitrate,Commodity,S024,Deepak Enterprises
+M004,Ammonium Nitrate,Commodity,S026,Bharat Enterprises
+M004,Ammonium Nitrate,Commodity,S035,Surya Chemicals
+M004,Ammonium Nitrate,Commodity,S041,Sahara Chemicals
+M003,Potassium Chloride,Commodity,S004,BelChem Chemicals
+M003,Potassium Chloride,Commodity,S011,Minsk Specialty Chemicals
+M003,Potassium Chloride,Commodity,S015,Ural Enterprises
+M003,Potassium Chloride,Commodity,S017,Volga Chemicals
+M003,Potassium Chloride,Commodity,S022,Moscow Industries
+M003,Potassium Chloride,Commodity,S023,Quebec Chemicals
+M003,Potassium Chloride,Commodity,S025,Vitebsk Specialty Chemicals
+M003,Potassium Chloride,Commodity,S030,Alberta Industries
+M003,Potassium Chloride,Commodity,S031,SiberChem Specialty Chemicals
+M003,Potassium Chloride,Commodity,S034,Hyderabad Chemicals
+M003,Potassium Chloride,Commodity,S035,Surya Chemicals
+M003,Potassium Chloride,Commodity,S037,St. Petersburg Chemicals
+M003,Potassium Chloride,Commodity,S042,Nusantara Chemicals
+M003,Potassium Chloride,Commodity,S043,Indo Chemicals
+M005,Potassium Sulphate,Commodity,S011,Minsk Specialty Chemicals
+M005,Potassium Sulphate,Commodity,S020,Nova Industries
+M005,Potassium Sulphate,Commodity,S023,Quebec Chemicals
+M005,Potassium Sulphate,Commodity,S025,Vitebsk Specialty Chemicals
+M005,Potassium Sulphate,Commodity,S029,Grodno Industries
+M005,Potassium Sulphate,Commodity,S031,SiberChem Specialty Chemicals
+M005,Potassium Sulphate,Commodity,S033,Brest Industries
+M005,Potassium Sulphate,Commodity,S041,Sahara Chemicals
+M016,Potash,Commodity,S014,Kazan Corp
+M016,Potash,Commodity,S021,Ontario Enterprises
+M016,Potash,Commodity,S025,Vitebsk Specialty Chemicals
+M016,Potash,Commodity,S031,SiberChem Specialty Chemicals
+M016,Potash,Commodity,S032,Maple Chemicals
+M016,Potash,Commodity,S033,Brest Industries
+M016,Potash,Commodity,S038,Chennai Chemicals
+M016,Potash,Commodity,S039,Maghreb Chemicals
+M006, Potassium Nitrate,Commodity,S017,Volga Chemicals
+M006, Potassium Nitrate,Commodity,S021,Ontario Enterprises
+M006, Potassium Nitrate,Commodity,#N/A,Potassium Nitrate 
+M006, Potassium Nitrate,Commodity,S030,Alberta Industries
+M006, Potassium Nitrate,Commodity,S033,Brest Industries
+M006, Potassium Nitrate,Commodity,S034,Hyderabad Chemicals
+M006, Potassium Nitrate,Commodity,S042,Nusantara Chemicals
+M007,Chlorine,Specialty,S044,ChemTech Corp
+M007,Chlorine,Specialty,S047,Shenzhen Specialty Chemicals
+M007,Chlorine,Specialty,S048,SinoChem Specialty Chemicals
+M007,Chlorine,Specialty,S055,Liberty Specialty Chemicals
+M007,Chlorine,Specialty,S056,Guangzhou Chemicals
+M007,Chlorine,Specialty,S061,ChemTech GmbH
+M007,Chlorine,Specialty,S063,Bremen GmbH
+M011,Boron,Specialty,S044,ChemTech Corp
+M011,Boron,Specialty,S048,SinoChem Specialty Chemicals
+M011,Boron,Specialty,S051,Summit Industries
+M011,Boron,Specialty,S052,Rhein Chemicals
+M011,Boron,Specialty,S053,Elliot & Sons Enterprises
+M011,Boron,Specialty,S055,Liberty Specialty Chemicals
+M011,Boron,Specialty,S056,Guangzhou Chemicals
+M011,Boron,Specialty,S058,Frontier Specialty Chemicals
+M011,Boron,Specialty,S061,ChemTech GmbH
+M011,Boron,Specialty,S062,Red Dragon Chemicals Co.
+M008,Iron,Specialty,S045,Berlin Enterprises
+M008,Iron,Specialty,S048,SinoChem Specialty Chemicals
+M008,Iron,Specialty,S051,Summit Industries
+M008,Iron,Specialty,S055,Liberty Specialty Chemicals
+M008,Iron,Specialty,S057,Beijing Corp
+M008,Iron,Specialty,S061,ChemTech GmbH
+M008,Iron,Specialty,S062,Red Dragon Chemicals Co.
+M009,Zinc,Specialty,S045,Berlin Enterprises
+M009,Zinc,Specialty,S046,Pioneer Chemicals
+M009,Zinc,Specialty,S050,Frankfurt Corp
+M009,Zinc,Specialty,S057,Beijing Corp
+M009,Zinc,Specialty,S059,Nordic GmbH
+M012,Molybdenum,Specialty,S046,Pioneer Chemicals
+M012,Molybdenum,Specialty,S057,Beijing Corp
+M012,Molybdenum,Specialty,S059,Nordic GmbH
+M012,Molybdenum,Specialty,S060,Orient Chemicals Co.
+M010,Manganese,Specialty,S049,Wuhan Corp
+M010,Manganese,Specialty,S051,Summit Industries
+M010,Manganese,Specialty,S054,Bayer Corp
+M010,Manganese,Specialty,S058,Frontier Specialty Chemicals
+M010,Manganese,Specialty,S059,Nordic GmbH
+M010,Manganese,Specialty,S063,Bremen GmbH
+M013,Copper,Specialty,S049,Wuhan Corp
+M013,Copper,Specialty,S056,Guangzhou Chemicals
+M013,Copper,Specialty,S058,Frontier Specialty Chemicals
+M013,Copper,Specialty,S063,Bremen GmbH
+M013,Copper,Specialty,S064,Greenfield Chemicals Ltd.
+M014,Phosphoric Acid,Rare,S065,Wuhan Enterprises
+M014,Phosphoric Acid,Rare,S068,Summit Enterprises
+M014,Phosphoric Acid,Rare,S071,Shenzhen Industries
+M014,Phosphoric Acid,Rare,S072,Frontier Chemicals
+M014,Phosphoric Acid,Rare,S076,Pioneer Industries
+M014,Phosphoric Acid,Rare,S077,Guangzhou Industries
+M014,Phosphoric Acid,Rare,S079,SinoChem Industries
+M015,Phosphate Rock,Rare,S066,Aqaba Corp
+M015,Phosphate Rock,Rare,S067,Fez Corp
+M015,Phosphate Rock,Rare,S069,Bizerte Industries
+M015,Phosphate Rock,Rare,S070,Irbid Specialty Chemicals
+M015,Phosphate Rock,Rare,S073,Casablanca Industries
+M015,Phosphate Rock,Rare,S074,Zarqa Specialty Chemicals
+M015,Phosphate Rock,Rare,S075,Rabat Enterprises
+M015,Phosphate Rock,Rare,S078,Sfax Industries
+M015,Phosphate Rock,Rare,S080,Atlas Chemicals

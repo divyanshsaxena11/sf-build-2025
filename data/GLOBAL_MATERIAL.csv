@@ -1,0 +1,17 @@
+﻿Global_Material_ID,Global_Material_Name,Global_Material_Type
+M001,Ammonia,Commodity
+M002,Urea,Commodity
+M003,Potassium Chloride,Commodity
+M004,Ammonium Nitrate,Commodity
+M005,Potassium Sulphate,Commodity
+M006,Potash,Commodity
+M007,Potassium Nitrate,Commodity
+M008,Chlorine,Specialty
+M009,Iron,Specialty
+M010,Zinc,Specialty
+M011,Manganese,Specialty
+M012,Boron,Specialty
+M013,Molybdenum,Specialty
+M014,Copper,Specialty
+M015,Phosphoric Acid,Rare
+M016,Phosphate Rock,Rare
