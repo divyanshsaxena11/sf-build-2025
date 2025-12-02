@@ -1,0 +1,932 @@
+
+name: PROCUREMENT_SEMANTIC_VIEW
+description: |-
+  This semantic view provides a unified and business-friendly representation of the procurement domain by integrating supplier, vendor, material, certification, and performance data. It brings together core master datasets—including global suppliers, raw materials, certifications, and vendor mappings—along with relationship tables that link suppliers to materials and certifications.
+
+  The view enables consistent reporting and analytics by standardizing key procurement entities such as suppliers, materials, certifications, and vendor performance scores. It supports use cases like supplier qualification, sourcing decisions, cost optimization, risk assessment, and performance management.
+
+  By combining operational procurement datasets into a single semantic layer, this view allows business users to easily explore suppliers, their materials, their compliance certifications, and their historical performance—without needing to understand the underlying data structures.
+tables:
+  - name: COMMODITY_PRICE_FERTILIZER
+    description: This table stores historical and forecasted prices for various fertilizers, including actual market prices for 2021-2025 and projected prices for specific quarters in 2024 and 2025, along with the units of measurement for each commodity.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: COMMODITY_PRICE_FERTILIZER
+    dimensions:
+      - name: COMMODITIES
+        description: Type of fertilizer commodity being priced.
+        expr: COMMODITIES
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium
+          - Nitrogen
+          - Phosphate
+      - name: UNITS
+        description: The unit of measurement for the price of the fertilizer commodity, indicating whether the price is expressed per short ton ($/ST) or per metric ton ($/MT).
+        expr: UNITS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - $/ST
+          - $/MT
+    facts:
+      - name: _2022
+        description: The average price of fertilizer commodities in the year 2022.
+        expr: '"2022"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '542.5'
+          - '854.5'
+          - '586.2'
+      - name: _2023
+        description: The average price of fertilizer commodities in the year 2023.
+        expr: '"2023"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '609.0'
+          - '518.9'
+          - '275.6'
+      - name: _2024
+        description: The average price of fertilizer commodities in the fourth quarter of 2024.
+        expr: '"2024"'
+        data_type: NUMBER(38,1)
+        sample_values:
+          - '183.7'
+          - '327.4'
+          - '626.4'
+      - name: _2025Q1
+        description: The average price of fertilizer commodities for the first quarter of 2025.
+        expr: '"2025Q1"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '183.7'
+          - '345.9'
+          - '656.6'
+      - name: _2025Q2
+        description: The price of fertilizer commodities in the second quarter of 2025.
+        expr: '"2025Q2"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '728.0'
+          - '183.7'
+          - '353.6'
+      - name: _2025Q3
+        description: The average price of fertilizer commodity 2025Q3
+        expr: '"2025Q3"'
+        data_type: NUMBER(38,1)
+        sample_values:
+          - '183.7'
+          - '378.7'
+          - '857.9'
+      - name: ACTUAL_MARKET_PRICES_FOR_NON_FUEL_AND_FUEL_COMMODITIES_2021_2025
+        description: Actual market prices for non-fuel and fuel commodities from 2021 to 2025.
+        expr: '"Actual_Market_Prices_for_Non-Fuel_and_Fuel_Commodities_2021-2025"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '220.2'
+          - '331.4'
+          - '659.7'
+    primary_key:
+      columns:
+        - COMMODITIES
+        - UNITS
+  - name: GLOBAL_CERTIFICATION
+    description: This table stores a list of global certifications, with each certification uniquely identified by a global certification ID and described by a certification name.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: GLOBAL_CERTIFICATION
+    dimensions:
+      - name: GLOBAL_CERTIFICATION_ID
+        description: Unique identifier for a global certification.
+        expr: GLOBAL_CERTIFICATION_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - C001
+          - C002
+          - C003
+      - name: GLOBAL_CERTIFICATION_NAME
+        description: Type of global certification held by the organization, such as quality management (ISO 9001), occupational health and safety management (ISO 45001), or environmental management (ISO 14001).
+        expr: GLOBAL_CERTIFICATION_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - ISO 9001
+          - ISO 45001
+          - ISO 14001
+  - name: GLOBAL_MATERIAL
+    description: This table stores information about materials used globally across an organization, with each record representing a unique material. The table captures the material's identifier, name, and type, providing a centralized repository for material data that can be referenced across various business processes and systems.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: GLOBAL_MATERIAL
+    dimensions:
+      - name: GLOBAL_MATERIAL_ID
+        description: Unique identifier for a material used globally across the organization.
+        expr: GLOBAL_MATERIAL_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - M009
+          - M010
+          - M002
+      - name: GLOBAL_MATERIAL_NAME
+        description: The name of the material used in a global context, such as a chemical compound or substance, used to identify and distinguish between different materials.
+        expr: GLOBAL_MATERIAL_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium Chloride
+          - Ammonia
+          - Urea
+      - name: GLOBAL_MATERIAL_TYPE
+        description: Categorization of materials based on their market classification, with options including commodity materials that are widely available and traded, rare materials that are difficult to source, and specialty materials that have unique properties or applications.
+        expr: GLOBAL_MATERIAL_TYPE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Commodity
+          - Rare
+          - Specialty
+    primary_key:
+      columns:
+        - GLOBAL_MATERIAL_ID
+  - name: GLOBAL_SUPPLIER
+    description: This table stores information about global suppliers, including their identification, contact details, lead time, reliability score, trade restrictions, and capacity, as well as an indicator of whether they are an existing vendor for CapChem.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: GLOBAL_SUPPLIER
+    dimensions:
+      - name: GLOBAL_SUPPLIER_ADDRESS
+        description: The physical location of the global supplier, including the street address, country, and postal code.
+        expr: GLOBAL_SUPPLIER_ADDRESS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - 329 Tech Park, India, 174470
+          - 400 Industrial Area, Indonesia, 177474
+          - 211 Industrial Area, UAE, 658588
+      - name: GLOBAL_SUPPLIER_COUNTRY
+        description: The country where the global supplier is based.
+        expr: GLOBAL_SUPPLIER_COUNTRY
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Indonesia
+          - UAE
+          - Saudi Arabia
+      - name: GLOBAL_SUPPLIER_EMAIL
+        description: The email address of the global supplier's primary point of contact.
+        expr: GLOBAL_SUPPLIER_EMAIL
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - contact@jubair.com
+          - contact@moscow.com
+          - contact@mecca.com
+      - name: GLOBAL_SUPPLIER_ID
+        description: Unique identifier for a global supplier.
+        expr: GLOBAL_SUPPLIER_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - S003
+          - S052
+          - S002
+      - name: GLOBAL_SUPPLIER_NAME
+        description: The name of the global supplier, indicating the company that provides goods or services to the organization.
+        expr: GLOBAL_SUPPLIER_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Medan Chemicals
+          - Kazan Corp
+          - Mecca Enterprises
+      - name: GLOBAL_SUPPLIER_PHONENUMBER
+        description: The phone number of the global supplier.
+        expr: GLOBAL_SUPPLIER_PHONENUMBER
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - +971-5107980137
+          - +91-7398443490
+          - +966-5784963273
+      - name: GLOBAL_SUPPLIER_WEBSITE
+        description: The website URL of the global supplier.
+        expr: GLOBAL_SUPPLIER_WEBSITE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - http://www.medan.com
+          - http://www.jubair.com
+          - http://www.mecca.com
+      - name: GLOBAL_TRADE_RESTRICTIONS
+        description: Indicates whether the supplier is subject to global trade restrictions, such as sanctions or embargoes, that may impact their ability to conduct business internationally.
+        expr: GLOBAL_TRADE_RESTRICTIONS
+        data_type: BOOLEAN
+        sample_values:
+          - 'FALSE'
+          - 'TRUE'
+      - name: WHETHER_EXISITING_VENDOR_FOR_CAPCHEM
+        description: Indicates whether the supplier is an existing vendor for CapChem.
+        expr: WHETHER_EXISITING_VENDOR_FOR_CAPCHEM
+        data_type: BOOLEAN
+        sample_values:
+          - 'FALSE'
+          - 'TRUE'
+    facts:
+      - name: GLOBAL_RELIABILITY_SCORE
+        description: A score indicating the reliability of a global supplier, ranging from 1 (low) to 10 (high), based on their past performance, quality of products, and overall trustworthiness.
+        expr: GLOBAL_RELIABILITY_SCORE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '8'
+          - '9'
+          - '7'
+      - name: GLOBAL_SUPPLIER_CAPACITY
+        description: The total production or supply capacity of a global supplier, representing the maximum quantity of goods or services that the supplier is capable of producing or providing.
+        expr: GLOBAL_SUPPLIER_CAPACITY
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '408594'
+          - '26333'
+          - '341290'
+      - name: LEAD_TIME
+        description: The time it takes for a supplier to deliver goods after an order has been placed.
+        expr: LEAD_TIME
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '17'
+          - '89'
+          - '44'
+    primary_key:
+      columns:
+        - GLOBAL_SUPPLIER_ID
+  - name: MATERIAL_SUPPLIER
+    description: This table stores information about the suppliers of various materials, linking each material to its corresponding supplier, allowing for easy tracking and management of material sourcing.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: MATERIAL_SUPPLIER
+    dimensions:
+      - name: GLOBAL_MATERIAL_ID
+        description: Unique identifier for a material across all suppliers.
+        expr: GLOBAL_MATERIAL_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - M009
+          - M010
+          - M002
+      - name: GLOBAL_MATERIAL_NAME
+        description: The name of the material being supplied.
+        expr: GLOBAL_MATERIAL_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Ammonia
+          - Ammonium Nitrate
+          - Urea
+      - name: GLOBAL_MATERIAL_TYPE
+        description: Categorization of materials based on their market characteristics, with Commodity materials being widely available and standardized, Rare materials being hard to find or in short supply, and Specialty materials being unique or customized.
+        expr: GLOBAL_MATERIAL_TYPE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Commodity
+          - Rare
+          - Specialty
+      - name: GLOBAL_SUPPLIER_ID
+        description: Unique identifier for a supplier that provides materials to the organization.
+        expr: GLOBAL_SUPPLIER_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - S003
+          - S052
+          - S002
+      - name: GLOBAL_SUPPLIER_NAME
+        description: The name of the supplier that provides materials to the organization.
+        expr: GLOBAL_SUPPLIER_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Medan Chemicals
+          - Kazan Corp
+          - Mecca Enterprises
+    primary_key:
+      columns:
+        - GLOBAL_MATERIAL_ID
+    unique_keys:
+      - columns:
+          - GLOBAL_SUPPLIER_ID
+  - name: PRICE_SPECIFICATIONS
+    description: This table stores price specifications for various fertilizers, including their corresponding world export weights for the years 2014-2026, along with the unit of measurement for each price specification.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: PRICE_SPECIFICATIONS
+    dimensions:
+      - name: FERTILIZERS
+        description: Type of fertilizer used in the production process.
+        expr: FERTILIZERS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium
+          - Nitrogen
+          - Phosphate
+      - name: PRICE_SPECS
+        description: This column contains the names of various price specifications for different chemical products, including their location, grade, and unit of measurement, used to track and analyze market prices.
+        expr: PRICE_SPECS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - US Gulf NOLA DAP Export Spot Price per mt, USD/metric tonne
+          - 'Potassium Chloride (Muriate of Potash) Standard Grade: FOB Vancouver Spot Price, USD/metric tonne'
+          - US Gulf NOLA Urea Granular Spot Price, USD/ST
+      - name: UNIT
+        description: The unit of measurement for the price, indicating whether the price is per short ton ($/st) or per metric ton ($/mt).
+        expr: UNIT
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - $/st
+          - $/mt
+    facts:
+      - name: WORLD_EXPORT_WEIGHTS_2014_2026_
+        description: The proportion of world export weights for the years 2014 to 2026.
+        expr: '"World Export Weights (2014-2026)"'
+        data_type: NUMBER(38,1)
+        access_modifier: public_access
+        sample_values:
+          - '0.6'
+          - '0.9'
+          - '0.5'
+    primary_key:
+      columns:
+        - FERTILIZERS
+  - name: PURCHASE_ORDERS
+    description: This table stores information about purchase orders made by a company, including details about the vendor, raw materials purchased, quantities, prices, and dates, allowing for tracking and analysis of procurement activities.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: PURCHASE_ORDERS
+    dimensions:
+      - name: CAPCHEM_RAW_MATERIAL_CATEGORY
+        description: Categorization of raw materials used in the production process, indicating the type of chemical or nutrient being purchased.
+        expr: CAPCHEM_RAW_MATERIAL_CATEGORY
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium
+          - Phosphurus
+          - Micronutrient
+      - name: CAPCHEM_RAW_MATERIAL_ID
+        description: Unique identifier for the raw material purchased.
+        expr: CAPCHEM_RAW_MATERIAL_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - RM0003
+          - RM0012
+          - RM0010
+      - name: CAPCHEM_RAW_MATERIAL_NAME
+        description: The name of the raw material purchased.
+        expr: CAPCHEM_RAW_MATERIAL_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium Chloride
+          - Manganese
+          - Molybdenum
+      - name: CAPCHEM_VENDOR_ID
+        description: Unique identifier for the vendor from which the purchase order was made.
+        expr: CAPCHEM_VENDOR_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - V005
+          - V002
+          - V012
+      - name: CAPCHEM_VENDOR_NAME
+        description: The name of the vendor from which the purchase order was made.
+        expr: CAPCHEM_VENDOR_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Casablanca Industries
+          - Volga Chemicals
+          - Bayer Corp
+      - name: PURCHASE_ORDER_DATE
+        description: Date on which the purchase order was placed.
+        expr: PURCHASE_ORDER_DATE
+        data_type: DATE
+        sample_values:
+          - 02/04/22
+          - 03/04/22
+          - 16/04/22
+      - name: PURCHASE_ORDER_NUMBER
+        description: Unique identifier for a purchase order, typically assigned by the purchasing system to track and manage the order.
+        expr: PURCHASE_ORDER_NUMBER
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - PO202201571
+          - PO202207048
+          - PO202204770
+    time_dimensions:
+      - name: ORDER_DATE
+        expr: PURCHASE_ORDER_DATE
+        data_type: DATE
+    facts:
+      - name: QUANTITY
+        description: The quantity of items ordered in a purchase order.
+        expr: QUANTITY
+        data_type: NUMBER(38,2)
+        access_modifier: public_access
+        sample_values:
+          - '1.06'
+          - '5.13'
+          - '8.56'
+      - name: TOTAL_AMOUNT
+        description: The total monetary value of a purchase order, representing the sum of the costs of all items ordered.
+        expr: TOTAL_AMOUNT
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '264682'
+          - '3126586'
+          - '6597'
+      - name: UNIT_PRICE_OF_RM
+        description: The cost of the raw material used in the purchase order, expressed in the currency of the transaction.
+        expr: UNIT_PRICE_OF_RM
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '99704'
+          - '1130993'
+          - '6923'
+    primary_key:
+      columns:
+        - CAPCHEM_VENDOR_ID
+  - name: RAW_MATERIAL
+    description: This table stores information about raw materials used by the company, including a unique identifier, global material ID, name, and category, to track and manage raw materials across different systems and locations.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: RAW_MATERIAL
+    dimensions:
+      - name: CAPCHEM_RAW_MATERIAL_CATEGORY
+        description: The category of raw material used in the production process, such as Potassium, Nitrogen, or Micronutrient, which are essential components for manufacturing various products.
+        expr: CAPCHEM_RAW_MATERIAL_CATEGORY
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium
+          - Nitrogen
+          - Micronutrient
+      - name: CAPCHEM_RAW_MATERIAL_ID
+        description: Unique identifier for a raw material used in the manufacturing process.
+        expr: CAPCHEM_RAW_MATERIAL_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - RM0003
+          - RM0007
+          - RM0002
+      - name: CAPCHEM_RAW_MATERIAL_NAME
+        description: The name of the raw material used in the production process.
+        expr: CAPCHEM_RAW_MATERIAL_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Potassium Chloride
+          - Ammonia
+          - Urea
+      - name: GLOBAL_MATERIAL_ID
+        description: Unique identifier for a raw material used in production, allowing for tracking and management of material inventory and supply chain.
+        expr: GLOBAL_MATERIAL_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - M009
+          - M010
+          - M002
+    primary_key:
+      columns:
+        - CAPCHEM_RAW_MATERIAL_NAME
+  - name: SUPPLIER_CERTIFICATIONS
+    description: This table stores information about certifications held by suppliers, linking each supplier to their respective certifications, and providing the names of both the supplier and the certification for reference.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: SUPPLIER_CERTIFICATIONS
+    dimensions:
+      - name: GLOBAL_CERTIFICATION_ID
+        description: Unique identifier for a global certification.
+        expr: GLOBAL_CERTIFICATION_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - C001
+          - C002
+          - C003
+      - name: GLOBAL_CERTIFICATION_NAME
+        description: The type of global certification held by a supplier, such as ISO 9001 (quality management), ISO 45001 (occupational health and safety), or ISO 14001 (environmental management).
+        expr: GLOBAL_CERTIFICATION_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - ISO 9001
+          - ISO 45001
+          - ISO 14001
+      - name: GLOBAL_SUPPLIER_ID
+        description: Unique identifier for a supplier across all regions and systems.
+        expr: GLOBAL_SUPPLIER_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - S003
+          - S052
+          - S002
+      - name: GLOBAL_SUPPLIER_NAME
+        description: The name of the global supplier that has been certified.
+        expr: GLOBAL_SUPPLIER_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Medan Chemicals
+          - Kazan Corp
+          - Mecca Enterprises
+    primary_key:
+      columns:
+        - GLOBAL_CERTIFICATION_ID
+    unique_keys:
+      - columns:
+          - GLOBAL_SUPPLIER_ID
+  - name: SUPPLIER_CONTRACTS
+    description: This table stores information about contracts between a company and its suppliers, including supplier details, contract terms, and payment information.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: SUPPLIER_CONTRACTS
+    dimensions:
+      - name: CONTRACT_ID
+        description: Unique identifier for a supplier contract.
+        expr: CONTRACT_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - C0003
+          - C0056
+          - C0001
+      - name: CURRENCY
+        description: The currency in which the supplier contract is denominated.
+        expr: CURRENCY
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - GBP
+          - USD
+          - EUR
+      - name: DELIVERY_TERMS
+        description: |-
+          The terms under which the supplier will deliver goods to the buyer, where:
+
+          * FOB (Free on Board) means the supplier is responsible for delivering the goods to the buyer's ship or transportation carrier, after which the buyer assumes all risk and costs.
+          * EXW (Ex Works) means the supplier is only responsible for making the goods available at their premises, and the buyer is responsible for all costs and risks from that point onwards.
+          * CIF (Cost, Insurance, and Freight) means the supplier is responsible for delivering the goods to the buyer's destination, including the cost of insurance and freight, but the buyer assumes all risk once the goods are delivered.
+        expr: DELIVERY_TERMS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - FOB
+          - EXW
+          - CIF
+      - name: DISCOUNT_TERMS
+        description: The terms and conditions under which a supplier offers a discount on the total invoice amount, based on the payment timeline.
+        expr: DISCOUNT_TERMS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - No Discount
+          - 1% if paid within 15 days
+          - 2% if paid within 10 days
+      - name: END_DATE
+        description: The date on which the supplier contract is set to expire.
+        expr: END_DATE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - 19/11/24
+          - 24/07/25
+          - 24/02/25
+      - name: GLOBAL_SUPPLIER_ADDRESS
+        description: The physical location of the supplier, including the street address, country, and postal code.
+        expr: GLOBAL_SUPPLIER_ADDRESS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - 329 Tech Park, India, 174470
+          - 211 Industrial Area, UAE, 658588
+          - 843 Chemical Zone, Saudi Arabia, 193925
+      - name: GLOBAL_SUPPLIER_COUNTRY
+        description: The country where the global supplier is based.
+        expr: GLOBAL_SUPPLIER_COUNTRY
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - UAE
+          - Canada
+          - Saudi Arabia
+      - name: GLOBAL_SUPPLIER_EMAIL
+        description: The email address of the global supplier associated with the contract.
+        expr: GLOBAL_SUPPLIER_EMAIL
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - contact@al-saud.com
+          - contact@quebec.com
+          - contact@al-arab.com
+      - name: GLOBAL_SUPPLIER_ID
+        description: Unique identifier for the supplier.
+        expr: GLOBAL_SUPPLIER_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - S012
+          - S040
+          - S027
+      - name: GLOBAL_SUPPLIER_NAME
+        description: The name of the global supplier associated with the contract.
+        expr: GLOBAL_SUPPLIER_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - SinoChem Industries
+          - Sfax Industries
+          - Vitebsk Specialty Chemicals
+      - name: GLOBAL_SUPPLIER_WEBSITE
+        description: The website URL of the global supplier.
+        expr: GLOBAL_SUPPLIER_WEBSITE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - http://www.sinochem.com
+          - http://www.al-nasrchemicals.com
+          - http://www.al-arab.com
+      - name: GLOBAL_TRADE_RESTRICTIONS
+        description: Indicates whether the supplier contract is subject to global trade restrictions, such as export controls or sanctions.
+        expr: GLOBAL_TRADE_RESTRICTIONS
+        data_type: BOOLEAN
+        sample_values:
+          - 'FALSE'
+          - 'TRUE'
+      - name: PAYMENT_TERMS
+        description: The terms under which payment is expected to be made to the supplier, including the number of days after the invoice date that payment is due.
+        expr: PAYMENT_TERMS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Net 60
+          - Net 30
+          - Net 45
+      - name: PENALTY_CLAUSES
+        description: This column captures the penalty terms associated with each supplier contract, outlining the specific penalties that may be incurred in the event of a breach or non-compliance, such as late delivery or other contractual violations.
+        expr: PENALTY_CLAUSES
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - 'Breach penalty: $5000'
+          - No penalty
+          - 'Late delivery penalty: 1% per week'
+      - name: RENEWAL_TERMS
+        description: Defines the renewal terms of a supplier contract, indicating whether the contract will automatically renew, not renew, or require manual renewal.
+        expr: RENEWAL_TERMS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Auto-renewal
+          - No renewal
+          - Manual renewal
+      - name: START_DATE
+        description: The date when the supplier contract became effective.
+        expr: START_DATE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - 20/11/23
+          - 29/04/25
+          - 19/08/24
+      - name: STATUS
+        description: The current state of the supplier contract, indicating whether it is still in effect (Active) or has reached its end date and is no longer valid (Expired).
+        expr: STATUS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Expired
+          - Active
+      - name: WHETHER_EXISITING_VENDOR_FOR_CAPCHEM
+        description: Indicates whether the supplier is an existing vendor for CapChem.
+        expr: WHETHER_EXISITING_VENDOR_FOR_CAPCHEM
+        data_type: BOOLEAN
+        sample_values:
+          - 'FALSE'
+          - 'TRUE'
+    facts:
+      - name: CONTRACT_VALUE
+        description: The total monetary value of a contract between a supplier and the organization.
+        expr: CONTRACT_VALUE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '26046'
+          - '22718'
+          - '13972'
+      - name: GLOBAL_RELIABILITY_SCORE
+        description: A score indicating the reliability of a supplier, ranging from 1 (low) to 10 (high), based on their past performance and adherence to contractual obligations.
+        expr: GLOBAL_RELIABILITY_SCORE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '6'
+          - '8'
+          - '5'
+      - name: GLOBAL_SUPPLIER_PHONENUMBER
+        description: The phone number of the global supplier associated with the contract.
+        expr: GLOBAL_SUPPLIER_PHONENUMBER
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '-4481939865'
+          - '-5446841157'
+          - '-4402855054'
+      - name: LEAD_TIME
+        description: The time it takes for a supplier to deliver goods or services after receiving an order.
+        expr: LEAD_TIME
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '76'
+          - '13'
+          - '16'
+  - name: VENDOR
+    description: This table stores information about vendors, including a unique identifier specific to CapChem, a global supplier identifier, and the vendor's name.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: VENDOR
+    dimensions:
+      - name: CAPCHEM_VENDOR_ID
+        description: Unique identifier for a vendor in the CapChem system.
+        expr: CAPCHEM_VENDOR_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - V003
+          - V002
+          - V001
+      - name: CAPCHEM_VENDOR_NAME
+        description: The name of the vendor or supplier that provides chemicals to the organization.
+        expr: CAPCHEM_VENDOR_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Mecca Enterprises
+          - Jubair Corp
+          - Prakash Chemicals
+      - name: GLOBAL_SUPPLIER_ID
+        description: Unique identifier for the supplier or vendor, used to track and manage relationships with global suppliers across the organization.
+        expr: GLOBAL_SUPPLIER_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - S003
+          - S064
+          - S002
+    primary_key:
+      columns:
+        - CAPCHEM_VENDOR_ID
+    unique_keys:
+      - columns:
+          - GLOBAL_SUPPLIER_ID
+  - name: VENDOR_PERFORM
+    description: This table stores historical performance metrics for vendors, capturing their on-time delivery, full performance, quality scores, pricing competitiveness, payment terms, and contingency support over the last 5 years, as well as a composite supplier performance score.
+    base_table:
+      database: SF_CORTEX_MFG_DB
+      schema: PROCUREMENT_DEMO
+      table: VENDOR_PERFORM
+    dimensions:
+      - name: CAPCHEM_VENDOR_ID
+        description: Unique identifier for a vendor in the CapChem system.
+        expr: CAPCHEM_VENDOR_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - V003
+          - V002
+          - V001
+      - name: CAPCHEM_VENDOR_NAME
+        description: The name of the vendor performing the service or providing the product.
+        expr: CAPCHEM_VENDOR_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Mecca Enterprises
+          - Jubair Corp
+          - Prakash Chemicals
+      - name: CONTINGENCY_SUPPORT
+        description: Indicates whether the vendor provides contingency support, meaning they offer additional assistance or backup resources in case of unexpected events or disruptions.
+        expr: CONTINGENCY_SUPPORT
+        data_type: BOOLEAN
+        sample_values:
+          - 'FALSE'
+          - 'TRUE'
+    facts:
+      - name: COMPOSITE_SUPPLIER_PERFORMANCE_SCORE
+        description: A measure of a supplier's overall performance, calculated by aggregating various metrics such as on-time delivery, quality, and responsiveness, with higher scores indicating better performance.
+        expr: COMPOSITE_SUPPLIER_PERFORMANCE_SCORE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '79'
+          - '75'
+          - '67'
+      - name: IN_FULL_PERFOMANCE_LAST_5_YEARS
+        synonyms:
+          - in full performance
+        description: The percentage of time the vendor has delivered full performance over the last 5 years, indicating their reliability and ability to meet contractual obligations.
+        expr: IN_FULL_PERFOMANCE_LAST_5_YEARS
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '90'
+          - '100'
+          - '80'
+      - name: ON_TIME_PERFORMANCE_LAST_5_YEARS
+        synonyms:
+          - on time performance
+        description: The percentage of time that the vendor has delivered goods or services on or before the scheduled delivery date over the last 5 years.
+        expr: ON_TIME_PERFORMANCE_LAST_5_YEARS
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        default_aggregation: 0
+        sample_values:
+          - '90'
+          - '70'
+          - '80'
+      - name: PAYMENT_TERMS_IN_DAYS_FROM_INVOCIE
+        description: The number of days a vendor has to make a payment after receiving an invoice.
+        expr: PAYMENT_TERMS_IN_DAYS_FROM_INVOCIE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '90'
+          - '30'
+          - '15'
+      - name: PRICING_PERFORMANCE_TIMES_LOWEST_COST_AMONG_VENDORS_IN_LAST_5_YEARS_
+        description: The percentage of times the vendor offered the lowest cost among all vendors for a specific product or service over the last 5 years.
+        expr: '"Pricing_Performance_(%_times_lowest_cost_among_vendors_in_last_5_years)"'
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '30'
+          - '60'
+          - '10'
+      - name: QUALITY_SCORE_LAST_5_YEARS
+        description: The average quality score of a vendor's performance over the last 5 years, with a higher score indicating better performance.
+        expr: QUALITY_SCORE_LAST_5_YEARS
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '90'
+          - '65'
+          - '50'
+    primary_key:
+      columns:
+        - CAPCHEM_VENDOR_ID
+relationships:
+  - name: GLOBALCERTIFICATIONSSUPPLIERCERTIFICATIONS
+    left_table: GLOBAL_CERTIFICATION
+    right_table: SUPPLIER_CERTIFICATIONS
+    relationship_columns:
+      - left_column: GLOBAL_CERTIFICATION_ID
+        right_column: GLOBAL_CERTIFICATION_ID
+  - name: GLOBALMATERIALMATERIALSUPPLIER
+    left_table: GLOBAL_MATERIAL
+    right_table: MATERIAL_SUPPLIER
+    relationship_columns:
+      - left_column: GLOBAL_MATERIAL_ID
+        right_column: GLOBAL_MATERIAL_ID
+  - name: SUPPLIERCERTIFICATIONS
+    left_table: GLOBAL_SUPPLIER
+    right_table: SUPPLIER_CERTIFICATIONS
+    relationship_columns:
+      - left_column: GLOBAL_SUPPLIER_ID
+        right_column: GLOBAL_SUPPLIER_ID
+  - name: SUPPLIERMATERIALSUPPLIER
+    left_table: GLOBAL_SUPPLIER
+    right_table: MATERIAL_SUPPLIER
+    relationship_columns:
+      - left_column: GLOBAL_SUPPLIER_ID
+        right_column: GLOBAL_SUPPLIER_ID
+  - name: SUPPLIERVENDOR
+    left_table: GLOBAL_SUPPLIER
+    right_table: VENDOR
+    relationship_columns:
+      - left_column: GLOBAL_SUPPLIER_ID
+        right_column: GLOBAL_SUPPLIER_ID
+  - name: PRICE_SPECIFICATIONS_COMMODITY_PRICE_FERTILIZER
+    left_table: PRICE_SPECIFICATIONS
+    right_table: COMMODITY_PRICE_FERTILIZER
+    relationship_columns:
+      - left_column: FERTILIZERS
+        right_column: COMMODITIES
+      - left_column: UNIT
+        right_column: UNITS
+  - name: PURCHASE_ORDERS_PRICE_SPECIFICATIONS
+    left_table: PURCHASE_ORDERS
+    right_table: PRICE_SPECIFICATIONS
+    relationship_columns:
+      - left_column: CAPCHEM_RAW_MATERIAL_CATEGORY
+        right_column: FERTILIZERS
+  - name: RAWMATERIALGLOBALMATERIAL
+    left_table: RAW_MATERIAL
+    right_table: GLOBAL_MATERIAL
+    relationship_columns:
+      - left_column: GLOBAL_MATERIAL_ID
+        right_column: GLOBAL_MATERIAL_ID
+  - name: SUPPLIERSUPPLIERCONTRACTS
+    left_table: SUPPLIER_CONTRACTS
+    right_table: GLOBAL_SUPPLIER
+    relationship_columns:
+      - left_column: GLOBAL_SUPPLIER_ID
+        right_column: GLOBAL_SUPPLIER_ID
+  - name: VENDORPURCHASEORDER
+    left_table: VENDOR
+    right_table: PURCHASE_ORDERS
+    relationship_columns:
+      - left_column: CAPCHEM_VENDOR_ID
+        right_column: CAPCHEM_VENDOR_ID
+  - name: VENDORVENDORPERFORMANCE
+    left_table: VENDOR
+    right_table: VENDOR_PERFORM
+    relationship_columns:
+      - left_column: CAPCHEM_VENDOR_ID
+        right_column: CAPCHEM_VENDOR_ID
